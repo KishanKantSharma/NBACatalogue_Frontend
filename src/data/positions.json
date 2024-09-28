@@ -1,0 +1,29 @@
+{
+    "positions": [
+        {
+            "cover": "/positions/Kobe4.jpg", 
+            "title": "Point Guard", 
+            "search": "PG"
+        }, 
+        {
+            "cover": "/positions/Kobe6.jpg", 
+            "title": "Center", 
+            "search": "C"
+        },
+        {
+            "cover": "/positions/Kobe2.jpg", 
+            "title": "Power Forward", 
+            "search": "PF"
+        },
+        {
+            "cover": "/positions/Kobe5.jpg", 
+            "title": "Small Forward", 
+            "search": "SF"
+        },
+        {
+            "cover": "/positions/Kobe1.jpg", 
+            "title": "Shooting Guard", 
+            "search": "SG"
+        }
+    ]
+}
