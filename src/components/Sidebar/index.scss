@@ -9,81 +9,34 @@
     display: flex; 
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
-    
-    .logo {
-        padding: 8px 10px; 
-        
-        img { 
-            display: block; 
-            margin: 3px auto; 
-            margin-left: 15px;
-            width: 60px; 
-            height: 60px;
-        }
-    }
+}
 
-    nav { 
-        display: flex; 
-        align-items: center;
-        justify-content: space-evenly; 
-        flex-grow: 1;
+.logo img { 
+    display: block; 
+    margin: 3px auto; 
+    margin-left: 15px;
+    width: 60px; 
+    height: 60px;
+}
 
-        a { 
-            font-size: 22px; 
-            color: rgba(240, 240, 240, 0.8); 
-            margin: 0 40px; 
-            position: relative; 
-            text-decoration: none; 
-            transition: color 0.3s ease;
+nav { 
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly; 
+    flex-grow: 1;
+}
 
-            &:hover { 
-                color: #fff;
+nav a { 
+    font-size: 22px; 
+    color: rgba(240, 240, 240, 0.8); 
+    margin: 0 40px; 
+    text-decoration: none; 
+    position: relative;
+    transition: color 0.3s ease;
+}
 
-                svg { 
-                    opacity: 0; 
-                }
-
-                &:after { 
-                    opacity: 1; 
-                }
-            }
-
-            &:after { 
-                content: ""; 
-                position: absolute; 
-                bottom: 0; 
-                display: block; 
-                width: 100%; 
-                text-align: center; 
-                opacity: 0; 
-                transition: all 0.3s ease;
-            }
-
-            &:first-child::after { 
-                content: 'HOME'; 
-            }
-
-            &.teams-link::after { 
-                content: "TEAMS"; 
-            }
-
-            &.news-link::after { 
-                content: "NEWS"; 
-            }
-
-            &.position-link::after { 
-                content: "POSITION"; 
-            }
-
-            &.player-link::after { 
-                content: "PLAYER"; 
-            }
-
-            &.active svg {
-                color: #fff; 
-            }
-        }
-    }
+nav a:hover { 
+    color: #fff;
 }
 
 .hamburger-icon, 
@@ -93,50 +46,40 @@
 
 @media screen and (max-width: 1000px) {
     .nav-bar {
-        position: initial; 
-        height: auto; 
+        height: 60px;
+    }
 
-        nav {
-            display: none;
-        }
+    nav {
+        display: none; 
+    }
 
-        &.mobile-nav { /* Added a mobile-specific class */
-            width: 100%; 
-            height: 140px;
-            background: #184E77;
-            position: fixed; 
-            z-index: 2; 
-            margin: 0;
+    .mobile-nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    }
 
-            a {
-                display: flex; 
-                padding-left: 35%; 
-                margin: 4px;
-                opacity: 1; /* Ensures visibility in mobile */
-            }
+    .hamburger-icon, 
+    .close-icon {
+        display: block;
+        position: absolute; 
+        top: 15px; 
+        right: 15px;
+        cursor: pointer;
+    }
 
-            a:after {
-                opacity: 1;
-                position: initial;
-                width: auto;
-                margin-left: 10px;
-            }
-
-            a svg {
-                opacity: 1 !important;
-            }
-
-            &.mobile-show { 
-                display: block;
-            }
-        }
-
-        .hamburger-icon, 
-        .close-icon {
-            display: block;
-            position: absolute; 
-            top: 15px; 
-            right: 15px; 
-        }
+    .mobile-show {
+        display: flex;
+        flex-direction: column;
+        background: #184E77;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        align-items: center;
+        justify-content: center;
     }
 }

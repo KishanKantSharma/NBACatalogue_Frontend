@@ -1,18 +1,16 @@
 .images-team {
     display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
+    gap: 50px; 
+    flex-wrap: wrap; 
     padding-bottom: 100px;
     margin-left: 30px;
 
-
     .image-box {
         position: relative;
-        flex: 1 1 20%;
+        flex: 1 1 20%; 
         height: 350px;
         overflow: hidden;
         border-radius: 20px;
-        max-width: calc(25%);
         margin-top: 50px;
         animation: slideInFromBottom 2s forwards;
         opacity: 0;
@@ -36,7 +34,7 @@
             opacity: 0;
             transform: translateY(100%);
             transition: all 0.5s ease-in-out;
-          }
+        }
 
         .name {
             margin: 0;
@@ -57,11 +55,10 @@
             font-size: 18px;
             transition: background-color 0.3s ease-in-out;
             margin-left: -30px;
-          }
+        }
 
-                
         &:hover .teams-image {
-            transform: scale(1.1); /* Zoom-in effect on hover */
+            transform: scale(1.1); 
         }
 
         .btn:hover {
@@ -70,12 +67,10 @@
 
         &:hover .content {
             opacity: 1;
-            transform: translateY(0); /* Slide up content when hovered */
-          }
+            transform: translateY(0); 
+        }
     }
-
 }
-
 
 .container.teams-page {
     padding: 20px;
@@ -125,16 +120,15 @@
 
     .images-team {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         gap: 15px;
         padding-bottom: 100px;
-        margin-left: -10px;
-        width: 90vh;
-        height: 55vh;
-
+        margin-left: 0;
+        width: 100%; 
+        
         .image-box {
             height: 200px; 
-            max-width: calc(50% - 10px);
+            max-width: 100%; 
         }
     }
 }
